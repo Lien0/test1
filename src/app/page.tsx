@@ -1,95 +1,74 @@
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowRight,
+  faBuilding,
+  faTruck,
+  faWallet,
+} from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className={styles.layout}>
+      <main className={styles.layout__main}>
+        <div className={styles.main__title}>
+          <h1 className={styles.title__1}>Bienvenidos!</h1>
+          <h2 className={styles.title__2}>
+            Me alegra verte aquí denuevo espero que tu visita sea muy amena y
+            encuentres todo lo que estás buscando, suerte.
+          </h2>
+        </div>
+        <div className={styles.main__btn}>
+          <Link href="./pages/carnaza" className={styles.a__continue}>
+            <button className={styles.btn__continue}>
+              <span>Continuar</span>
+              <span>
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  style={{ height: "3rem" }}
+                />
+              </span>
+            </button>
+          </Link>
+        </div>
+        <div className={styles.main__cards}>
+          <Cards
+            ico={faBuilding}
+            description="Contamos con más de 100 tiendas destribuidas en el estado."
+          />
+          <Cards
+            ico={faTruck}
+            description="Tenemos envios gratis a toda la república."
+          />
+          <Cards
+            ico={faWallet}
+            description="Precios que cuidarán tu bolsillo en todo momento"
+          />
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    </div>
+  );
+}
+
+function Cards({
+  ico,
+  description,
+}: {
+  ico: IconDefinition;
+  description: string;
+}) {
+  return (
+    <div className={styles.cards__card}>
+      <div className={styles.card__logo}>
+        <div>
+          <FontAwesomeIcon icon={ico} style={{ height: "9rem" }} />
+        </div>
+      </div>
+      <div className={styles.card__descriptionContainer}>
+        <p className={styles.card__description}>{description}</p>
+      </div>
     </div>
   );
 }

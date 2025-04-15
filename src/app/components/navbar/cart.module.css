@@ -1,0 +1,173 @@
+.cartNav {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.cart__title {
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.cart__title > p {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Vidaloka", serif;
+}
+.cart__title > button {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cart__products {
+  height: 70%;
+  width: 100%;
+  padding-top: 2rem;
+  /* display: flex;
+  flex-direction: column; */
+  overflow: scroll;
+  border-bottom: 1px solid black;
+}
+
+.products__card {
+  height: 20rem;
+  width: 50rem;
+  display: flex;
+  gap: 1rem;
+  box-sizing: border-box;
+  margin: 1rem;
+  box-shadow: 0 0 5px #669BBC ;
+  padding: 1rem;
+  background-color: #669BBC10;
+  border-radius: 5px;
+}
+.card__image {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.card__description {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card__description > p {
+  font-size: 1.5rem;
+  text-align: start;
+  letter-spacing: 0.1rem;
+}
+
+.card__price {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.card__price > p {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card__price > button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #c1121f;
+  padding: 0.7rem;
+  transition: all 300ms ease-in-out;
+}
+
+.card__price > button:hover {
+  background: #c1121f;
+  color: white;
+}
+
+.cart__footer {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.cart__total {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.total__description{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.total__description > h3{
+  font-size: 2rem;
+  letter-spacing: .1rem;
+}
+.total__description > p{
+  font-size: 1.2rem;
+  opacity: .6;
+}
+.total__price{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total__price>p{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+.cart__checkout {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkout__btn{
+  width: 8rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #669BBC;
+  transition: all 300ms ease-in-out;
+}
+
+.checkout__btn:hover{
+  background: #669BBC;
+  color: white;
+}

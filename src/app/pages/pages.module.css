@@ -1,0 +1,251 @@
+.home__navbar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.home__main {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+}
+
+.main__layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.layout__categories {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.categories__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-left: 2rem;
+}
+
+.categories__list > li {
+  width: 90%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.categories__list > li > .links {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem;
+  list-style: none;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+}
+.links{
+  text-decoration: none;
+  font-size: 1.5rem;
+
+}
+
+.categories__list > li:hover > .links {
+  background-color: #780000;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.layout__content {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content__cards {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  padding-left: 10rem;
+  border-left: 2px solid #00304920;
+  border-right: 2px solid #00304920;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 45% 45% 10%;
+  grid-template-areas:
+    "card card card card"
+    "card card card card"
+    "pagination pagination pagination pagination";
+  gap: 1rem;
+}
+.cards__card {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #78000050;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.card__img {
+  width: 100%;
+  height: 60%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.card__description {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.card__title {
+  font-size: 1.8rem;
+}
+.card__text {
+  font-size: 1.2rem;
+}
+.card__price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card__btns {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+.card__btn {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #669bbc;
+  color: white;
+  transition: all 0.3s ease;
+}
+.card__btn:hover {
+  background-color: #003049;
+}
+
+.layout__advertisement {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.advertisement__content {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pagination__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-area: pagination;
+}
+.pagination__btn{
+  width: 6rem;
+  height: 3rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #C1121F;
+  color: #FDF0D5;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pagination__btn:hover{
+  background-color: #780000;
+}
+
+.pagination__pages{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;  
+  
+}
+.pagination__btnNumber{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #C1121F;
+  color: #FDF0D5;
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pagination__btnNumber:hover{
+  background-color: #780000;
+}
+.pagination__btnNumberActive{
+  background-color: #780000; 
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20px;
+  border: none;
+  color: #FDF0D5;
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home__footer{
+  position: absolute;
+  bottom: -10rem;
+  width: 100%;
+  height: 20%;
+  background-color: #003049;
+  padding: 2rem;
+  box-sizing: border-box;
+}
